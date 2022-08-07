@@ -16,6 +16,7 @@ import Navbar from "./components/navbar";
 
 import HomePage from "./pages/home";
 import ManualPage from "./pages/manual";
+import PolicyPage from "./pages/policy";
 
 function App() {
   const theme = createTheme({
@@ -37,6 +38,7 @@ function App() {
         <Switch>
           <Route path="/" exact><HomePage /></Route>
           <Route path="/manual" exact><ManualPage /></Route>
+          <Route path="/policy" exact><PolicyPage /></Route>
         </Switch>
       </Router>
       <Footer />
