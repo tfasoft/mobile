@@ -10,8 +10,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
+import Footer from "./components/footer";
 import Navbar from "./components/navbar";
+
 import HomePage from "./pages/home";
+import ManualPage from "./pages/manual";
 
 function App() {
   const theme = createTheme({
@@ -32,9 +36,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact><HomePage /></Route>
-          <Route path="/manual" exact>Manual</Route>
+          <Route path="/manual" exact><ManualPage /></Route>
         </Switch>
       </Router>
+      <Footer />
     </ThemeProvider>
   );
 }
