@@ -1,3 +1,5 @@
+import { useHistory } from "react-router-dom";
+
 import {
     AppBar,
     Toolbar,
@@ -6,7 +8,20 @@ import {
     Button,
 } from "@mui/material";
 
+const navItems = [
+    {
+        title: "Manual",
+        route: "/manual",
+    },
+    {
+        title: "Policy",
+        route: "/policy",
+    },
+];
+
 const Navbar = () => {
+    const history = useHistory();
+
     return (
         <AppBar
             elevation={0}
@@ -15,30 +30,27 @@ const Navbar = () => {
                 <Toolbar>
                     <Typography
                         variant="h5"
+                        onClick={() => history.push('/')}
                         sx={{
                             flexGrow: 1,
+                            cursor: "pointer",
                         }}
                     >
                         TFA Mobile
                     </Typography>
-                    <Button
-                        variant="text"
-                        color="inherit"
-                    >
-                        TFAsoft
-                    </Button>
-                    <Button
-                        variant="text"
-                        color="inherit"
-                    >
-                        Manual
-                    </Button>
-                    <Button
-                        variant="text"
-                        color="inherit"
-                    >
-                        Download
-                    </Button>
+                    {
+                        navItems.map((item) => {
+                            return (
+                                <Button
+                                    variant="text"
+                                    color="inherit"
+                                    onClick={() => history.push(item.route)}
+                                >
+                                    {item.title}
+                                </Button>
+                            );
+                        })
+                    }
                 </Toolbar>
             </Container>
         </AppBar>
