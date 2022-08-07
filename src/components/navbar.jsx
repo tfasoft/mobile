@@ -31,19 +31,13 @@ const Navbar = () => {
                         variant="text"
                         color="inherit"
                     >
-                        Docs
-                    </Button>
-                    <Button
-                        variant="text"
-                        color="inherit"
-                    >
-                        Blog
-                    </Button>
-                    <Button
-                        variant="text"
-                        color="inherit"
-                    >
                         Manual
+                    </Button>
+                    <Button
+                        variant="text"
+                        color="inherit"
+                    >
+                        Download
                     </Button>
                 </Toolbar>
             </Container>
