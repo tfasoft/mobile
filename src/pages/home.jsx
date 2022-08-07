@@ -17,7 +17,7 @@ const HomePage = () => {
             >
                 <Grid
                     md={6}
-                    sm={6}
+                    sm={12}
                     xs={12}
                     item
                 >
@@ -43,16 +43,22 @@ const HomePage = () => {
                                 fontSize={75}
                                 fontWeight="bold"
                                 color="primary"
+                                sx={{
+                                    textDecoration: "underline"
+                                }}
                             >
-                                TFA Mobile
+                                TFA Mobile!
                             </Typography>
                         </Box>
                     </Box>
                 </Grid>
                 <Grid
                     md={6}
-                    sm={6}
+                    sm={12}
                     xs={12}
+                    sx={{
+                        display: { xs: 'none', sm: 'none', md: 'block' },
+                    }}
                     item
                 >
                     <Box
