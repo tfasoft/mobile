@@ -17,7 +17,7 @@ const HomePage = () => {
             >
                 <Grid
                     md={6}
-                    sm={12}
+                    sm={6}
                     xs={12}
                     item
                 >
@@ -51,7 +51,7 @@ const HomePage = () => {
                 </Grid>
                 <Grid
                     md={6}
-                    sm={12}
+                    sm={6}
                     xs={12}
                     item
                 >
